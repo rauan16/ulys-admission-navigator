@@ -1,49 +1,101 @@
 # ULYS
 
-**Personalized University Admission Navigator**
+ULYS is a personalized university admission navigator that helps students understand where they can apply and what they need to do next.
 
-ULYS helps high school students understand where they can apply and what they need to do next.
+## What ULYS Does
 
-Instead of giving students another list of universities, ULYS turns their academic profile, goals, budget, and preferences into a personalized admission journey.
+- Builds a student profile from grades, IELTS/SAT, interests, budget and country preferences
+- Recommends universities using ULYS Match
+- Explains profile strengths and gaps
+- Compares university options
+- Creates a personalized admission Roadmap
+- Shows the Next Best Action
+- Supports What-If scenarios for IELTS, SAT, budget, country and major
+- Provides contextual guidance through ULIE
 
-## The Problem
+ULYS Match represents profile-university compatibility. It is not an admission probability.
 
-Students have access to thousands of universities, requirements, deadlines, and admission resources, but often lack a clear understanding of:
+## How It Works
 
-* which universities fit their profile;
-* what requirements they already meet;
-* what they still need to improve;
-* what they should do next.
+Profile
+→ Diagnosis
+→ ULYS Match
+→ Compare
+→ Roadmap
+→ Next Best Action
+→ What-If
+→ ULIE
 
-The problem is not a lack of information. It is the lack of a clear, personalized path.
+## What-If
 
-## Our Solution
+Students can change one assumption without changing their real profile.
 
-ULYS connects the entire admission journey:
+For example:
 
-**Profile → Diagnosis → ULYS Match → Compare → Roadmap → Next Best Action → What-If → ULIE**
+IELTS 6.5 → 8.0
 
-### Profile & Diagnosis
+ULYS recalculates:
+- university matches
+- roadmap tasks
+- next best action
 
-Students create a profile using their:
+This allows students to understand the consequences of a decision before making it.
 
-* academic results;
-* IELTS / SAT scores;
-* interests and intended major;
-* preferred countries;
-* budget and other preferences.
+## Technology
 
-ULYS analyzes this information and identifies strengths, gaps, and areas that need improvement.
+Frontend:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-### ULYS Match
+Backend:
+- Python
+- FastAPI
+- SQLAlchemy
+- Alembic
+- JWT authentication
 
-ULYS recommends universities based on the student's actual profile and explains why each option is relevant.
+AI:
+- OpenRouter / DeepSeek
 
-Students can see:
+Core matching, roadmap, Next Best Action and What-If logic are deterministic.
+AI is used as an explanation and guidance layer.
 
-* profile strengths;
-* missing or weaker requirements;
-* compatibility with each option;
-* relevant university information.
+## LOCUS Startup Hackathon 2026
 
-**ULYS Match represents profile-university compatibilit**
+Case 02 — Personalized University Admission Route.
+
+Pre-hackathon foundation:
+- basic ULYS infrastructure
+- authentication
+- reusable technical components
+
+Developed during LOCUS 2026:
+- redesigned admission journey
+- profile/onboarding flow
+- profile diagnosis
+- explainable ULYS Match
+- university comparison
+- personalized Roadmap
+- Next Best Action
+- What-If simulation
+- integration into one admission journey
+
+## Running Locally
+
+Frontend:
+
+npm install
+npm run dev
+
+Backend:
+
+Use the existing backend requirements/environment configuration and start the FastAPI application with the project's configured command.
+
+Required environment variables must be configured locally.
+Never commit .env files or API keys.
+
+## Project Status
+
+Working MVP built for LOCUS Startup Hackathon 2026.
